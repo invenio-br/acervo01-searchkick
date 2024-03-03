@@ -63,3 +63,5 @@ group :development do
   # gem "spring"
 end
 
+
+gem "administrate", "~> 0.20.1"
