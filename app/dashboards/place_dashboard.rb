@@ -13,6 +13,7 @@ class PlaceDashboard < Administrate::BaseDashboard
     description: Field::Text,
     name: Field::String,
     tags: Field::HasMany,
+    active: Field::Boolean,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -37,6 +38,7 @@ class PlaceDashboard < Administrate::BaseDashboard
     address
     description
     tags
+    active
     created_at
     updated_at
   ].freeze
@@ -49,6 +51,7 @@ class PlaceDashboard < Administrate::BaseDashboard
     description
     address
     tags
+    active
   ].freeze
 
   # COLLECTION_FILTERS

@@ -1,0 +1,14 @@
+<%= form_for :search, method: :get do |form| %>
+  <div class="mb-3" data-controller="autocomplete" data-autocomplete-url-value="/places/search" data-autocomplete-min-length-value="3" role="combobox">
+    <div class="input-group">
+      <%= form.text_field :q, class: "form-control", placeholder:  "Buscar Lugares", value: params.dig(:search, :q), data: { autocomplete_target: "input" } %>
+      <%= form.button :submit, class: "btn btn-outline-primary" do %>
+        <i class="bi bi-search"></i>
+      <% end %>
+    </div>
+    <%= form.hidden_field :place_id, data: { autocomplete_target: "hidden" } %>
+    <div class="list-group" data-autocomplete-target="results"></div>
+  </div>
+<% end %>
+
+<%= render partial: "place", collection: @places, as: :place %>

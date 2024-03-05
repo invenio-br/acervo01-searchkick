@@ -1,0 +1,8 @@
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title"><%= place.name %></h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary"><%= place.address %></h6>
+    <p class="card-text"><%= place.description %></p>
+    <%= link_to "Mais Detalhes", place_path(place.id), class: "btn btn-primary" %>
+  </div>
+</div>

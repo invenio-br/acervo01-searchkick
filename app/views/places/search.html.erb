@@ -1,0 +1,9 @@
+<% @places.each do |place| %>
+  <div class="list-group-item list-group-item-action" role="option" data-autocomplete-value="<%= place.id %>" data-autocomplete-label="<%= place.name %>">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1"><%= place.name %></h5>
+    </div>
+    <p class="mb-1"><%= place.address %></p>
+    <small><%= raw place.description %></small>
+  </div>
+<% end %>

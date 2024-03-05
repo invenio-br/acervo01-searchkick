@@ -63,5 +63,7 @@ group :development do
   # gem "spring"
 end
 
-
 gem "administrate", "~> 0.20.1"
+
+gem "searchkick", "~> 5.3.1"
+gem "elasticsearch", "~> 8.12.2"
